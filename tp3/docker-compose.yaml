@@ -1,6 +1,7 @@
 services:
     apache:
         image: php:8.5-apache
+        container_name: tp3_ap
         build:
             context: ./php
         ports:
@@ -12,6 +13,7 @@ services:
 
     mysql:
         image: mysql:8.0
+        container_name: tp3_my
         environment:
             MYSQL_ROOT_PASSWORD: sondage7791
             MYSQL_DATABASE: sondageRdc
@@ -24,6 +26,7 @@ services:
 
     phpmyadmin:
         image: phpmyadmin
+        container_name: tp3_php
         ports:
             -   "8081:80"
         environment:
@@ -34,6 +37,7 @@ services:
 
     postgresql:
         image: bitnami/postgresql
+        container_name: tp3_pos
         environment:
             POSTGRES_USER: user
             POSTGRES_PASSWORD: password
@@ -45,7 +49,7 @@ services:
 
     pgadmin:
         image: dpage/pgadmin4
-        container_name: pgadmin
+        container_name: tp3_pgadmin
         environment:
             PGADMIN_DEFAULT_EMAIL: admin@example.com
             PGADMIN_DEFAULT_PASSWORD: admin
@@ -56,6 +60,7 @@ services:
 
     mail_hog:
         image: mailhog/mailhog
+        container_name: tp3_mail
         logging:
             driver: 'none'
         ports:
