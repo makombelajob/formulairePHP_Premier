@@ -63,4 +63,4 @@ Each exercise includes:
 
 ## ℹ️ Author
 
-[**Your Name**] – Student at [Your Program or School]
+[**Job Makombela**] – Student at [EEDN]
